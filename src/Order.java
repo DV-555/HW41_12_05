@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -67,26 +66,7 @@ public class Order {
     return new Order(id, content, client, phone, price);
   }
 
-  public static int getTotalSum(List<Order> o){
-    int sum =0;
-    for ( Order x : o ) {
-      sum += x.getPrice();
-    }
-
-    return sum;
-  }
-  public static int sumOfOrders(List<Order> sum){
-    int count=0;
-    for (Order y: sum) {
-      count++;
-    }
-    return count;
-
-    }
-  }
-
-
-// Задача 1
+  // Задача 1
 // Дополните класс Order из классной работы.
 //Добавьте статический метод:
 //public static int getTotalSum(List<Order> orders)
@@ -95,4 +75,26 @@ public class Order {
 // к заказам как к общей идее).
 //Метод должен возвращать общую сумму заказов из списка
 // (за образец можете взять метод MyMath.sum() из классной работы).
+
+  public static int getTotalSum(List<Order> o) {
+    int sum = 0;
+    for (Order x : o) {
+      sum += x.getPrice();
+    }
+
+    return sum;
+  }
+
+  public static int sumOfOrders(List<Order> sum) {
+    int count = 0;
+    for (Order y : sum) {
+      count++;
+    }
+    return count;
+
+  }
+}
+
+
+
 
